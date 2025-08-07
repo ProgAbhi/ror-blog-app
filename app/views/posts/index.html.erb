@@ -12,3 +12,10 @@
   </div>
 <% end %>
 </div>
+<!-- For total posts across site -->
+<p>Total Posts: <%= Post.count %> posts</p>
+
+<!-- for total posts by current user -->
+<% if current_user %>
+  <p>Your Posts: <%= current_user.posts.count %> posts</p>
+<% end %>
